@@ -7,12 +7,12 @@ const app = express();
 const server = http.createServer(app);
 
 const io = new Server(server, {
-    cors:{
-        // origin:process.env.URL,
-        origin:'http://localhost:5173',
-        methods:['GET','POST']
-    }
-})
+  cors: {
+    // origin:process.env.URL,
+    origin: process.env.URL,
+    methods: ["GET", "POST"],
+  },
+});
 
 const userSocketMap = {} ; // this map stores socket id corresponding the user id; userId -> socketId
 

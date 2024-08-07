@@ -26,7 +26,7 @@ app.use(urlencoded({ extended: true }));
 // }
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow only this origin
+    origin: process.env.URL, // Allow only this origin
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
